@@ -18,11 +18,12 @@ app.get('/getCount', (req, res) => {
 app.post('/updateCount', (req, res) => {
   try {
     let incVal = req.body.number;
-    count += incVal;
+    let countValidate = count + incVal;
 
-    if (count > 20){
+    if (countValidate > 20){
       res.status(500).send('Count exceeded 20, rejecting');
     } else {
+      count = countValidate;
       res.status(200).send('Count updated successfully');
     }
   }
