@@ -1,0 +1,23 @@
+.page-container {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.page-contents {
+    background-color: cornflowerblue;
+    color: cornsilk;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.counter-text {
+    font-style: italic;
+}
+
+.counter-value {
+    font-weight: bold;
+    font-size: 120%;
+}

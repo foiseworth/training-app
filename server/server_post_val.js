@@ -6,6 +6,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 let count = 0;
 
+app.use('/web', express.static('../client/counter_display_post'));
+
 app.get('/getCount', (req, res) => {
   try {
     res.status(200).send(JSON.stringify(count));
