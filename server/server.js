@@ -3,9 +3,9 @@ const app = express();
 const port = 3000;
 let counter = 0;
 
-app.use('/web', express.static('../client/counter_display'));
+app.use('/', express.static('../client/counter_display'));
 
-app.get('/', (req, res) => {
+app.get('/getCount', (req, res) => {
   res.send(JSON.stringify(counter));
   counter++;
 })

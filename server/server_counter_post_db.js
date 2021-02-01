@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 let db;
 let count;
 
-app.use('/web', express.static('../client/counter_display_post'));
+app.use('/', express.static('../client/counter_display_post'));
 
 app.get('/getCount', async (req, res) => {
   try {
