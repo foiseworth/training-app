@@ -6,7 +6,6 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 let db;
-let count;
 
 app.use('/', express.static('../client/counter_display_post'));
 
@@ -53,7 +52,7 @@ app.post('/updateCount', async (req, res) => {
 
 
 
-MongoClient.connect('mongodb://gueabetmongotst07.skybet.net:27017/graduate-demo-can-delete', function(error, client) {
+MongoClient.connect('mongodb://gueabetmongotst07.skybet.net:27017', function(error, client) {
   if (error) {
     console.log(error);
     return;
